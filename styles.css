@@ -1,0 +1,163 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* основное меню */
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    background-color: darkslategrey;
+    justify-content: flex-end;
+}
+
+.menu a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.menu .menu__li:hover {
+    background-color: rgb(38, 63, 63);
+    color: rgb(236, 109, 87);
+}
+
+.menu .menu__li:hover .menu__li {
+    color: rgb(236, 109, 87);
+}
+
+.menu__ul {
+    display: flex;
+    height: 60px;
+}
+
+.menu__li {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__li a {
+    padding: 20px 28px;
+}
+
+/* выпадающее меню */
+.menu__parent-submenu {
+    display: flex;
+    position: relative;
+}
+
+.menu__ul-submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    min-width: 200px;
+}
+
+_:-ms-fullscreen,
+:root .menu__ul-submenu {
+    right: 0px;
+}
+
+.menu__li-submenu {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    flex-direction: column;
+    background: rgb(38, 63, 63);
+}
+
+.menu__li-submenu a {
+    padding: 14px 28px;
+}
+
+.menu__li-submenu:hover {
+    background-color: rgb(214, 213, 153) !important;
+}
+
+.menu__li-submenu:hover a {
+    color: cadetblue;
+}
+
+.menu__marker-submenu {
+    width: 20px;
+    margin-left: -20px;
+}
+
+.menu__marker-mobmenu {
+    height: 30px;
+    display: none;
+}
+
+#menu__marker-mobmenu-chekbox {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .menu__parent-submenu:hover .menu__ul-submenu {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu__marker-mobmenu {
+        display: block;
+        padding: 15px;
+    }
+
+    .menu {
+        height: 60px;
+        flex-wrap: wrap;
+    }
+
+    .menu__ul {
+        flex-direction: column;
+        background-color: indianred;
+        height: auto;
+        width: 100%;
+        height: 0;
+        transition: all 0.5s;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .menu__li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .menu__li a {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu input[type=checkbox]:checked~.menu__ul .menu__li a {
+        display: block;
+        padding: 20px 28px;
+    }
+
+    .menu input[type=checkbox]:checked~.menu__ul .menu__li {
+        height: auto;
+    }
+
+    .menu input[type=checkbox]:checked~.menu__ul {
+        height: auto;
+        opacity: 1;
+    }
+
+    .menu__marker-submenu {
+        display: none;
+    }
+}

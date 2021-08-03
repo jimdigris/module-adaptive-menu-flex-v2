@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Адаптивное меню на Flexbox</title>
+	<link rel="stylesheet" href="styles.css?211">
+</head>
+
+<body>
+	<nav class="menu">
+		<input id="menu__marker-mobmenu-chekbox" type="checkbox">
+		<label for="menu__marker-mobmenu-chekbox"><img class="menu__marker-mobmenu" src="icons-mobile-menu.svg" alt="icons-mobile-menu"></label>
+
+		<ul class="menu__ul" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<li class="menu__li"><a itemprop="url" href="#1">Главная</a></li>
+			<li class="menu__li"><a itemprop="url" href="#2">О нас</a></li>
+			<li class="menu__li menu__parent-submenu">
+				<a itemprop="url" href="#3">Услуги</a>
+				<img class="menu__marker-submenu" src="icons-down.svg" alt="icon-down">
+
+				<ul class="menu__ul-submenu">
+					<li class="menu__li-submenu"><a itemprop="url" href="#01">Строка подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#02">Подменю подменю подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#03">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#04">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#05">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#06">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#07">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#08">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#09">Подменю</a></li>
+					<li class="menu__li-submenu"><a itemprop="url" href="#010">Подменю</a></li>
+				</ul>
+
+			</li>
+			<li class="menu__li"><a itemprop="url" href="#4">Каталог</a></li>
+			<li class="menu__li"><a itemprop="url" href="#5">Блог</a></li>
+			<li class="menu__li"><a itemprop="url" href="#6">Контакты</a></li>
+		</ul>
+	</nav>
+	<hr>
+	<div>Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.</div>
+</body>
+
+</html>
